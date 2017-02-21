@@ -1,0 +1,48 @@
+doctype html
+html(lang="es")
+    head
+        title Ejemplo de Pug.js
+        script(type='text/javascript').
+
+    body
+
+        h1 Pug - Motor de vistas
+
+        h3 Atributes
+        img(src="https://www.lumino.co/assets/img/tech-icons/pugjs.png")
+        #content
+
+        h3 Code
+        - for (var x = 0; x < 3; x++)
+            li #{x}
+
+        h3 Input
+        input(type='text' name='Hola')
+
+        h3 Iteration
+        ul
+          each val in [1, 2, 3, 4, 5]
+            li= val
+
+        h3 Mixin
+        mixin pet(name)
+          li.pet= name
+        ul
+          +pet('gato')
+          +pet('perro')
+          +pet('pájaro')
+
+        mixin article(title)
+          .article
+            .article-wrapper
+              h1= title
+              if block
+                block
+              else
+                p No content provided
+
+        +article('Hola')
+
+        +article('Hola')
+          p Este es
+          p mi articulo
