@@ -1,4 +1,5 @@
 # Ejemplos de Pug.js
+## Autor: Samuel Ramos Barroso
 
 1. Se incluyen varios ejemplos en la carpeta ```/src```
 2. Ejemplos varios: ```examples.pug```
